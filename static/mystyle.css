@@ -1,0 +1,31 @@
+/* 
+This is my css file
+ */
+
+
+
+
+.container{
+    background-color: lavenderblush;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+/* .colorbox{
+    background-color: lightgrey;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+}
+
+td{
+    padding: 5px;
+    height: 20px;
+    width: 100px;
+    border: 5px solid white;
+} */
+
