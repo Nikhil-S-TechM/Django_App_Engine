@@ -1,4 +1,14 @@
 import time
+from datetime import datetime
+import django
 
-time.sleep(5)
-print("This is a string generated from str_gen.py  Viacom")
+django.setup()
+
+from home.models import Process
+
+i = 0
+while(i < 40):
+    p = Process(pid=str(i), remark=str(datetime.now()))
+    p.save()
+    i = i + 1
+    time.sleep(30)
