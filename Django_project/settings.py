@@ -97,7 +97,7 @@ else:
             'PORT': '5432',
             'NAME': 'test_db',
             'USER': 'postgres',
-            'PASSWORD': 'nikhil.1001',
+            'PASSWORD': 'root',
         }
     }
 
