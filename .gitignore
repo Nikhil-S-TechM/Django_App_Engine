@@ -1,0 +1,6 @@
+/__pychace__/*
+/migrations/*
+*.pyc
+home/migrations/*
+.gcloudignore
+

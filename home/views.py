@@ -14,7 +14,7 @@ def back(request):
 
 def run_ffmpeg(request):
     sample_str = ""
-    p1 = subprocess.Popen("F:\\Office\\ffmpeg\\bin\\ffmpeg", stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=False, universal_newlines=True)
+    p1 = subprocess.Popen("ffmpeg", stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=False, universal_newlines=True)
     for line in p1.stdout:
         sample_str = sample_str + line
     my_dict = {"sample_str":sample_str}

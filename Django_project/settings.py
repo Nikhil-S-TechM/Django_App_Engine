@@ -77,29 +77,16 @@ WSGI_APPLICATION = 'Django_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-if os.getenv('GAE_APPLICATION', None):
-    # Running on production App Engine, so connect to Google Cloud SQL using
-    # the unix socket at /cloudsql/<your-cloudsql-connection string>
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'HOST': '/cloudsql/winged-poetry-274803:us-central1:django-project-instance',
-            'NAME': 'test_db',
-            'USER': 'postgres',
-            'PASSWORD': 'nikhil.1001',
-        }
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'HOST': os.environ['DB_HOST'],
+    'PORT': os.environ['DB_PORT'],
+    'NAME': os.environ['DB_NAME'],
+    'USER': os.environ['DB_USER'],
+    'PASSWORD': os.environ['DB_PASSWORD']
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-            'NAME': 'test_db',
-            'USER': 'postgres',
-            'PASSWORD': 'root',
-        }
-    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
